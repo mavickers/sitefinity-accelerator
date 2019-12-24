@@ -120,7 +120,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Interfaces\IAugmentingExternalMapper.cs" />
     <Compile Include="Interfaces\IAugmentingInternalMapper.cs" />
     <Compile Include="Interfaces\IDynamicContentInboundPipeMapper.cs" />
