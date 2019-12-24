@@ -151,12 +151,11 @@
     <Compile Include="Models\Operator.cs" />
     <Compile Include="Models\OrderBy.cs" />
     <Compile Include="Models\QuerySortParameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
