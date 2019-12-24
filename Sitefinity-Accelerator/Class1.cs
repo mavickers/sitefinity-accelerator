@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Sitefinity_Accelerator
+﻿namespace SitefinityAccelerator
 {
     public class Class1
     {

@@ -2,7 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Sitefinity_Accelerator</RootNamespace>
+    <RootNamespace>SitefinityAccelerator</RootNamespace>
+    <AssemblyName>LightPath.SitefinityAccelerator</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>12.1.7128</Version>
+    <Authors>Michael A. Vickers</Authors>
+    <Company>LightPath Solutions, LLC</Company>
+    <Product>Sitefinity Accelerator</Product>
+    <Copyright>2019 LightPath Solutions, LLC</Copyright>
   </PropertyGroup>
 
 </Project>
