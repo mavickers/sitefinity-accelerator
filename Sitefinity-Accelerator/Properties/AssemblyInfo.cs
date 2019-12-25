@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Resources;
+using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyCompany("LightPath Solutions, LLC")]
 [assembly: AssemblyProduct("Sitefinity Accelerator")]
+[assembly: AssemblyTitle("Sitefinity Accelerator")]
 [assembly: AssemblyCopyright("Copyright © 2019 LightPath Solutions, LLC. All rights reserved.")]
 [assembly: AssemblyTrademark("Sitefinity Accelerator")]
-[assembly: AssemblyTitle("Sitefinity Accelerator")]
 [assembly: AssemblyDescription("Interfaces and classes for scaffolding Sitefinity projects.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCulture("")]
@@ -33,6 +32,6 @@ using System.Resources;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("12.1.7128.1")]
-[assembly: AssemblyFileVersion("12.1.7128.1")]
+[assembly: AssemblyVersion("12.1.7128")]
+[assembly: AssemblyFileVersion("12.1.7128.2")]
 [assembly: NeutralResourcesLanguageAttribute("en")]

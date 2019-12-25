@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>LightPath.SiteFinityAccelerator</id>
+        <title>Sitefinity Accelerator</title>
+        <version>12.1.7128.2</version>
+        <authors>mavickers</authors>
+        <owners>LightPath Solutions, LLC</owners>
+        <projectUrl>https://github.com/mavickers/sitefinity-accelerator/</projectUrl>
+        <license type="file">license.md</license>
+		<icon>icon.png</icon>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>Migration of extensions.</releaseNotes>
+        <description>Interfaces and classes for scaffolding Sitefinity projects.</description>
+        <summary>Interfaces and classes for scaffolding Sitefinity projects.</summary>
+        <copyright>Copyright ©2019 LightPath Solutions, LLC</copyright>
+        <repository type="git" url="https://github.com/mavickers/sitefinity-accelerator.git" branch="master" />
+        <tags>sitefinity web utility cms</tags>
+    </metadata>
+    <files>
+		<file src="license.md" target="" />
+		<file src="icon.png" target="" />
+    </files>
+</package>
