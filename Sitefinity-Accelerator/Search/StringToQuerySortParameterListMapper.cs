@@ -1,10 +1,10 @@
-﻿using SitefinityAccelerator.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SitefinityAccelerator.Interfaces;
 using SitefinityAccelerator.Models;
 
-namespace MyFloridaCfoWeb.Application.Search
+namespace SitefinityAccelerator.Search
 {
     public class StringToQuerySortParameterListMapper : IGenericMapper<string, List<QuerySortParameter>>
     {

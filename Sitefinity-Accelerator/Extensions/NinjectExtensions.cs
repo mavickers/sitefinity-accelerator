@@ -1,11 +1,11 @@
-﻿using Ninject;
-using Ninject.Activation;
-using Ninject.Syntax;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Ninject;
+using Ninject.Activation;
+using Ninject.Syntax;
 
-namespace MyFloridaCfoWeb.Application.Extensions
+namespace SitefinityAccelerator.Extensions
 {
     public static class NinjectExtensions
     {

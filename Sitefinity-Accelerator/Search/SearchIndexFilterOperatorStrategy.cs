@@ -2,7 +2,7 @@
 using SitefinityAccelerator.Interfaces;
 using Telerik.Sitefinity.Services.Search;
 
-namespace MyFloridaCfoWeb.Application.Search
+namespace SitefinityAccelerator.Search
 {
     public class SearchIndexFilterOperatorStrategy : IGenericParsingStrategy<string, KeyValuePair<string, FilterOperator>>
     {
