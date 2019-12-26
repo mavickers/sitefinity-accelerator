@@ -33,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
@@ -45,7 +46,16 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.0.8.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitefinity.RazorEngine.3.0.8.0\lib\net40\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorGenerator.Mvc.2.3.12\lib\net40\RazorGenerator.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -93,9 +103,18 @@
       <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.Sitefinity.Frontend, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Frontend.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Frontend.Data, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Frontend.Data.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Sitefinity.Model, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Model.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Mvc, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.Sitefinity.Mvc.12.1.7128\lib\net472\Telerik.Sitefinity.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Sitefinity.Personalization, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Personalization.dll</HintPath>
@@ -164,8 +183,21 @@
       <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Utilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.Web.Design, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Attributes\ClientValueAttribute.cs" />
     <Compile Include="Extensions\BooleanExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
@@ -210,6 +242,8 @@
     <Compile Include="Interfaces\ISearchResultsValidator.cs" />
     <Compile Include="Interfaces\IToolboxItemFilter.cs" />
     <Compile Include="Interfaces\IValidator.cs" />
+    <Compile Include="Mappers\DefaultInitializingQueryParametersMapper.cs" />
+    <Compile Include="Mappers\DynamicContentToDynamicContentModelBaseMapper.cs" />
     <Compile Include="Models\Base\DynamicContentModelBase.cs" />
     <Compile Include="Models\Base\DynamicContentQueryParametersBase.cs" />
     <Compile Include="Models\Base\QueryParametersBase.cs" />
@@ -221,13 +255,21 @@
     <Compile Include="Models\OrderBy.cs" />
     <Compile Include="Models\QuerySortParameter.cs" />
     <Compile Include="Models\SearchIndexQueryResultModel.cs" />
+    <Compile Include="Ninject\FullBindingToSyntax.cs" />
+    <Compile Include="Ninject\FullBindingWhenInNamedWithOrOnSyntax.cs" />
+    <Compile Include="Ninject\LazyBindingWithOrOnSyntax.cs" />
+    <Compile Include="Ninject\LazyNinjectModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteHandlers\AugmentedPageEditorRouteHandler.cs" />
+    <Compile Include="RouteHandlers\AugmentedTemplateEditorRouteHandler.cs" />
+    <Compile Include="RouteHandlers\RouteHandlerDependencies.cs" />
     <Compile Include="Search\FilterModel.cs" />
     <Compile Include="Search\SearchIndexFilterOperatorStrategy.cs" />
     <Compile Include="Search\StringToQuerySortParameterListMapper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Sitefinity-Accelerator.nuspec" />
+    <None Include="app.config" />
+    <None Include="package.nuspec" />
     <None Include="license.md" />
     <None Include="packages.config" />
   </ItemGroup>

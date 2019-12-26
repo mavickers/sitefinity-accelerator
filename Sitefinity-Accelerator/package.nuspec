@@ -3,12 +3,12 @@
     <metadata>
         <id>LightPath.SiteFinityAccelerator</id>
         <title>Sitefinity Accelerator</title>
-        <version>12.1.7128.4</version>
+        <version>12.1.7128.10</version>
         <authors>mavickers</authors>
         <owners>lightpath</owners>
         <projectUrl>https://github.com/mavickers/sitefinity-accelerator/</projectUrl>
         <license type="file">license.md</license>
-		<icon>icon.png</icon>
+        <icon>icon.png</icon>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <releaseNotes>Bug fixes.</releaseNotes>
         <description>Interfaces and classes for scaffolding Sitefinity projects.</description>
@@ -17,9 +17,12 @@
         <repository type="git" url="https://github.com/mavickers/sitefinity-accelerator.git" branch="master" />
         <language>en-US</language>
         <tags>sitefinity web utility cms</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.7.2" />
+        </dependencies>
     </metadata>
     <files>
-		<file src="license.md" target="" />
-		<file src="icon.png" target="" />
+        <file src="license.md" target="" />
+        <file src="icon.png" target="" />
     </files>
 </package>
