@@ -31,6 +31,8 @@ namespace SitefinityAccelerator.Startup
             // - https://knowledgebase.progress.com/articles/Article/how-to-programmatically-launch-a-reindex
             // - https://www.progress.com/documentation/sitefinity-cms/for-developers-index-external-content
 
+            // todo: change Dictionary<string,string> to typed class
+
             var publishingManager = PublishingManager.GetManager(PublishingConfig.SearchProviderName);
             var indexes = args?[0] as Dictionary<string, string> ?? new Dictionary<string, string>();
 
