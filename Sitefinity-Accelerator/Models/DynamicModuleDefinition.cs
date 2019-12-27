@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
 using System.Web.Configuration;
 using SitefinityAccelerator.Interfaces;
 using Telerik.Sitefinity.DynamicModules.Builder.Model;
