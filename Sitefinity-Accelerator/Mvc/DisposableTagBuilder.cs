@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace SitefinityAccelerator.Html
+namespace SitefinityAccelerator.Mvc
 {
     public sealed class DisposableTagBuilder : TagBuilder, IDisposable
     {

@@ -199,6 +199,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Attributes\ClientValueAttribute.cs" />
+    <Compile Include="Exceptions\DesignModeException.cs" />
+    <Compile Include="Exceptions\UnconfiguredWidgetException.cs" />
     <Compile Include="Extensions\BooleanExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\DynamicContentExtensions.cs" />
@@ -215,7 +217,9 @@
     <Compile Include="Extensions\ToolboxesConfigExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Extensions\ZoneEditorExtensions.cs" />
-    <Compile Include="Html\DisposableTagBuilder.cs" />
+    <Compile Include="Mvc\BaseController.cs" />
+    <Compile Include="Mvc\BaseControllerParameters.cs" />
+    <Compile Include="Mvc\DisposableTagBuilder.cs" />
     <Compile Include="Interfaces\IAugmentingExternalMapper.cs" />
     <Compile Include="Interfaces\IAugmentingInternalMapper.cs" />
     <Compile Include="Interfaces\IDynamicContentInboundPipeMapper.cs" />

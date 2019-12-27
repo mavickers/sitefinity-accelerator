@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Mvc;
 using HtmlAgilityPack;
-using SitefinityAccelerator.Html;
+using SitefinityAccelerator.Mvc;
 
 namespace SitefinityAccelerator.Extensions
 {
