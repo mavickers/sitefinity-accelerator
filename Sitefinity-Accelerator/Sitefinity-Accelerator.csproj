@@ -61,6 +61,7 @@
       <HintPath>..\packages\RazorGenerator.Mvc.2.3.12\lib\net40\RazorGenerator.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -208,6 +209,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Attributes\ClientValueAttribute.cs" />
+    <Compile Include="Configuration\Security\RecycleBinSecurityElement.cs" />
+    <Compile Include="Configuration\Security\Widgets\WidgetSecurityElement.cs" />
+    <Compile Include="Configuration\Startup\StartupElement.cs" />
     <Compile Include="Exceptions\DesignModeException.cs" />
     <Compile Include="Exceptions\UnconfiguredWidgetException.cs" />
     <Compile Include="Extensions\BooleanExtensions.cs" />
@@ -226,6 +230,7 @@
     <Compile Include="Extensions\ToolboxesConfigExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Extensions\ZoneEditorExtensions.cs" />
+    <Compile Include="Models\SearchIndexInitializingModel.cs" />
     <Compile Include="Mvc\BaseController.cs" />
     <Compile Include="Mvc\BaseControllerParameters.cs" />
     <Compile Include="Mvc\DisposableTagBuilder.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SitefinityAccelerator.Models;
 using Telerik.Sitefinity.Abstractions;
 using Telerik.Sitefinity.Publishing;
 using Telerik.Sitefinity.Publishing.Configuration;
