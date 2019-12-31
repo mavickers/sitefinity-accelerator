@@ -230,6 +230,9 @@
     <Compile Include="Extensions\ToolboxesConfigExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Extensions\ZoneEditorExtensions.cs" />
+    <Compile Include="Filters\BackendPageToolboxItemFilter.cs" />
+    <Compile Include="Filters\PageTemplateToolboxItemFilter.cs" />
+    <Compile Include="Filters\UserRoleToolboxItemFilter.cs" />
     <Compile Include="Models\SearchIndexInitializingModel.cs" />
     <Compile Include="Mvc\BaseController.cs" />
     <Compile Include="Mvc\BaseControllerParameters.cs" />
