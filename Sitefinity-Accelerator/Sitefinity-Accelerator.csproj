@@ -290,6 +290,7 @@
     <Compile Include="Search\StringToQuerySortParameterListMapper.cs" />
     <Compile Include="Startup\CatchAllRouteParameterBindings.cs" />
     <Compile Include="Startup\SearchEngineStart.cs" />
+    <Compile Include="Startup\ToolboxFilters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -297,6 +298,8 @@
     <None Include="license.md" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
