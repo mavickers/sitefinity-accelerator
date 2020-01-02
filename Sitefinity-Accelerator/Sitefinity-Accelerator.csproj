@@ -1,305 +1,314 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE321877-B1EE-4A4E-938C-32D10C63573B}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SitefinityAccelerator</RootNamespace>
-    <AssemblyName>LightPath.SitefinityAccelerator</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>7.1</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>7.1</LangVersion>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="RazorEngine, Version=3.0.8.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitefinity.RazorEngine.3.0.8.0\lib\net40\RazorEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\RazorGenerator.Mvc.2.3.12\lib\net40\RazorGenerator.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web">
-      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Telerik.OpenAccess, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.35.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.OpenAccess.40.Extensions, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.40.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.OpenAccess.Runtime, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Frontend.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Data, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Frontend.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Model, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Model.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Mvc, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Mvc.12.1.7128\lib\net472\Telerik.Sitefinity.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Personalization, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Personalization.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Personalization.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Personalization.Impl.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Resources">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Resources.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Search, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Search.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Search.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Search.Impl.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Comments, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Comments.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Comments.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Comments.Impl.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Documents, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Documents.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Documents.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Documents.Impl.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Events, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Events.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Notifications, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Notifications.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Notifications.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Notifications.Impl.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.RecycleBin, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Services.RecycleBin.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Statistics, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Statistics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Statistics.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Statistics.Impl.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.SiteSync, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.SiteSync.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Utilities, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Utilities.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Web.Design, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Web.UI, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Web.UI.Skins, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.UI.Skins.dll</HintPath>
-    </Reference>
-    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
-    <Compile Include="Attributes\ClientValueAttribute.cs" />
-    <Compile Include="Configuration\Security\RecycleBinSecurityElement.cs" />
-    <Compile Include="Configuration\Security\Widgets\WidgetSecurityElement.cs" />
-    <Compile Include="Configuration\Startup\StartupElement.cs" />
-    <Compile Include="Exceptions\DesignModeException.cs" />
-    <Compile Include="Exceptions\UnconfiguredWidgetException.cs" />
-    <Compile Include="Extensions\BooleanExtensions.cs" />
-    <Compile Include="Extensions\DateTimeExtensions.cs" />
-    <Compile Include="Extensions\DynamicContentExtensions.cs" />
-    <Compile Include="Extensions\DynamicExtensions.cs" />
-    <Compile Include="Extensions\DynamicModuleManagerExtensions.cs" />
-    <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
-    <Compile Include="Extensions\IntExtensions.cs" />
-    <Compile Include="Extensions\IResultSetExtensions.cs" />
-    <Compile Include="Extensions\NinjectExtensions.cs" />
-    <Compile Include="Extensions\QueryExtensions.cs" />
-    <Compile Include="Extensions\SearchFilterExtensions.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Extensions\ToolboxesConfigExtensions.cs" />
-    <Compile Include="Extensions\TypeExtensions.cs" />
-    <Compile Include="Extensions\ZoneEditorExtensions.cs" />
-    <Compile Include="Filters\BackendPageToolboxItemFilter.cs" />
-    <Compile Include="Filters\PageTemplateToolboxItemFilter.cs" />
-    <Compile Include="Filters\UserRoleToolboxItemFilter.cs" />
-    <Compile Include="Models\SearchIndexInitializingModel.cs" />
-    <Compile Include="Mvc\BaseController.cs" />
-    <Compile Include="Mvc\BaseControllerParameters.cs" />
-    <Compile Include="Mvc\DisposableTagBuilder.cs" />
-    <Compile Include="Interfaces\IAugmentingExternalMapper.cs" />
-    <Compile Include="Interfaces\IAugmentingInternalMapper.cs" />
-    <Compile Include="Interfaces\IDynamicContentInboundPipeMapper.cs" />
-    <Compile Include="Interfaces\IDynamicContentMapper.cs" />
-    <Compile Include="Interfaces\IDynamicModuleDefinition.cs" />
-    <Compile Include="Interfaces\IEnumerableQueryResults.cs" />
-    <Compile Include="Interfaces\IFactory.cs" />
-    <Compile Include="Interfaces\IGenericMapper.cs" />
-    <Compile Include="Interfaces\IGenericParsingStrategy.cs" />
-    <Compile Include="Interfaces\IPredicateBuilder.cs" />
-    <Compile Include="Interfaces\IQueryEnumerableContent.cs" />
-    <Compile Include="Interfaces\IQueryGeneric.cs" />
-    <Compile Include="Interfaces\IQueryParameters.cs" />
-    <Compile Include="Interfaces\IQueryParametersMapper.cs" />
-    <Compile Include="Interfaces\IQueryResults.cs" />
-    <Compile Include="Interfaces\IQueryResultsMetrics.cs" />
-    <Compile Include="Interfaces\IQuerySearchIndex.cs" />
-    <Compile Include="Interfaces\ISearchFilterMapper.cs" />
-    <Compile Include="Interfaces\ISearchResultExcludingMapper.cs" />
-    <Compile Include="Interfaces\ISearchResultMapper.cs" />
-    <Compile Include="Interfaces\ISearchResults.cs" />
-    <Compile Include="Interfaces\ISearchResultsExcludingMapper.cs" />
-    <Compile Include="Interfaces\ISearchResultsMapper.cs" />
-    <Compile Include="Interfaces\ISearchResultsValidator.cs" />
-    <Compile Include="Interfaces\IToolboxItemFilter.cs" />
-    <Compile Include="Interfaces\IValidator.cs" />
-    <Compile Include="Mappers\DefaultInitializingQueryParametersMapper.cs" />
-    <Compile Include="Mappers\DynamicContentToDynamicContentModelBaseMapper.cs" />
-    <Compile Include="Models\Base\DynamicContentModelBase.cs" />
-    <Compile Include="Models\Base\DynamicContentQueryParametersBase.cs" />
-    <Compile Include="Models\Base\QueryParametersBase.cs" />
-    <Compile Include="Models\DesignModeWidgetViewModel.cs" />
-    <Compile Include="Models\DynamicContentQueryResultsModel.cs" />
-    <Compile Include="Models\DynamicModuleDefinition.cs" />
-    <Compile Include="Models\GenericUnconfiguredWidgetViewModel.cs" />
-    <Compile Include="Models\Operator.cs" />
-    <Compile Include="Models\OrderBy.cs" />
-    <Compile Include="Models\QuerySortParameter.cs" />
-    <Compile Include="Models\SearchIndexQueryResultModel.cs" />
-    <Compile Include="Mvc\SearchIndexController.cs" />
-    <Compile Include="Ninject\FullBindingToSyntax.cs" />
-    <Compile Include="Ninject\FullBindingWhenInNamedWithOrOnSyntax.cs" />
-    <Compile Include="Ninject\LazyBindingWithOrOnSyntax.cs" />
-    <Compile Include="Ninject\LazyNinjectModule.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RouteHandlers\AugmentedPageEditorRouteHandler.cs" />
-    <Compile Include="RouteHandlers\AugmentedTemplateEditorRouteHandler.cs" />
-    <Compile Include="RouteHandlers\RouteHandlerDependencies.cs" />
-    <Compile Include="Search\FilterModel.cs" />
-    <Compile Include="Search\SearchIndexFilterOperatorStrategy.cs" />
-    <Compile Include="Search\StringToQuerySortParameterListMapper.cs" />
-    <Compile Include="Startup\CatchAllRouteParameterBindings.cs" />
-    <Compile Include="Startup\SearchEngineStart.cs" />
-    <Compile Include="Startup\ToolboxFilters.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="package.nuspec" />
-    <None Include="license.md" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="icon.png" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{BE321877-B1EE-4A4E-938C-32D10C63573B}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>SitefinityAccelerator</RootNamespace>
+        <AssemblyName>LightPath.SitefinityAccelerator</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <Deterministic>true</Deterministic>
+        <TargetFrameworkProfile />
+        <NuGetPackageImportStamp>
+        </NuGetPackageImportStamp>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <LangVersion>7.1</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <LangVersion>7.1</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+            <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+            <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+            <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+        </Reference>
+        <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+            <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="RazorEngine, Version=3.0.8.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+            <HintPath>..\packages\Sitefinity.RazorEngine.3.0.8.0\lib\net40\RazorEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+            <HintPath>..\packages\RazorGenerator.Mvc.2.3.12\lib\net40\RazorGenerator.Mvc.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web">
+            <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Web.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web.Extensions" />
+        <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Xml" />
+        <Reference Include="Telerik.OpenAccess, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.OpenAccess.40.Extensions, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.40.Extensions.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.OpenAccess.Runtime, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Frontend, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Frontend.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Frontend.Data, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Frontend.Data.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Model, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Model.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Mvc, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Mvc.12.1.7128\lib\net472\Telerik.Sitefinity.Mvc.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Personalization, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Personalization.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Personalization.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Personalization.Impl.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Resources">
+            <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Resources.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Search, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Search.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Search.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Search.Impl.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Comments, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Comments.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Comments.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Comments.Impl.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Documents, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Documents.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Documents.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Documents.Impl.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Events, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Events.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Notifications, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Notifications.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Notifications.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Notifications.Impl.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.RecycleBin, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Services.RecycleBin.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Statistics, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Statistics.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Services.Statistics.Impl, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.1.7128\lib\net472\Telerik.Sitefinity.Services.Statistics.Impl.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.SiteSync, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.SiteSync.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Sitefinity.Utilities, Version=12.1.7128.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Sitefinity.Core.12.1.7128\lib\net472\Telerik.Sitefinity.Utilities.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Telerik.Web.Design, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.Design.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.Web.UI, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="Telerik.Web.UI.Skins, Version=2019.2.514.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+            <HintPath>..\packages\Telerik.Web.UI.2019.2.514.45\lib\net45\Telerik.Web.UI.Skins.dll</HintPath>
+        </Reference>
+        <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+            <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+        <Compile Include="Attributes\ClientValueAttribute.cs" />
+        <Compile Include="Configuration\Security\RecycleBinSecurityElement.cs" />
+        <Compile Include="Configuration\Security\Widgets\WidgetSecurityElement.cs" />
+        <Compile Include="Configuration\Startup\SearchIndexStartupElement.cs" />
+        <Compile Include="Exceptions\DesignModeException.cs" />
+        <Compile Include="Exceptions\UnconfiguredWidgetException.cs" />
+        <Compile Include="Extensions\BooleanExtensions.cs" />
+        <Compile Include="Extensions\DateTimeExtensions.cs" />
+        <Compile Include="Extensions\DynamicContentExtensions.cs" />
+        <Compile Include="Extensions\DynamicExtensions.cs" />
+        <Compile Include="Extensions\DynamicModuleManagerExtensions.cs" />
+        <Compile Include="Extensions\EnumExtensions.cs" />
+        <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+        <Compile Include="Extensions\IntExtensions.cs" />
+        <Compile Include="Extensions\IResultSetExtensions.cs" />
+        <Compile Include="Extensions\NinjectExtensions.cs" />
+        <Compile Include="Extensions\QueryExtensions.cs" />
+        <Compile Include="Extensions\SearchFilterExtensions.cs" />
+        <Compile Include="Extensions\StringExtensions.cs" />
+        <Compile Include="Extensions\ToolboxesConfigExtensions.cs" />
+        <Compile Include="Extensions\TypeExtensions.cs" />
+        <Compile Include="Extensions\ZoneEditorExtensions.cs" />
+        <Compile Include="Filters\BackendPageToolboxItemFilter.cs" />
+        <Compile Include="Filters\PageTemplateToolboxItemFilter.cs" />
+        <Compile Include="Filters\UserRoleToolboxItemFilter.cs" />
+        <Compile Include="Models\SearchIndexInitializingModel.cs" />
+        <Compile Include="Mvc\BaseController.cs" />
+        <Compile Include="Mvc\BaseControllerParameters.cs" />
+        <Compile Include="Mvc\DisposableTagBuilder.cs" />
+        <Compile Include="Interfaces\IAugmentingExternalMapper.cs" />
+        <Compile Include="Interfaces\IAugmentingInternalMapper.cs" />
+        <Compile Include="Interfaces\IDynamicContentInboundPipeMapper.cs" />
+        <Compile Include="Interfaces\IDynamicContentMapper.cs" />
+        <Compile Include="Interfaces\IDynamicModuleDefinition.cs" />
+        <Compile Include="Interfaces\IEnumerableQueryResults.cs" />
+        <Compile Include="Interfaces\IFactory.cs" />
+        <Compile Include="Interfaces\IGenericMapper.cs" />
+        <Compile Include="Interfaces\IGenericParsingStrategy.cs" />
+        <Compile Include="Interfaces\IPredicateBuilder.cs" />
+        <Compile Include="Interfaces\IQueryEnumerableContent.cs" />
+        <Compile Include="Interfaces\IQueryGeneric.cs" />
+        <Compile Include="Interfaces\IQueryParameters.cs" />
+        <Compile Include="Interfaces\IQueryParametersMapper.cs" />
+        <Compile Include="Interfaces\IQueryResults.cs" />
+        <Compile Include="Interfaces\IQueryResultsMetrics.cs" />
+        <Compile Include="Interfaces\IQuerySearchIndex.cs" />
+        <Compile Include="Interfaces\ISearchFilterMapper.cs" />
+        <Compile Include="Interfaces\ISearchResultExcludingMapper.cs" />
+        <Compile Include="Interfaces\ISearchResultMapper.cs" />
+        <Compile Include="Interfaces\ISearchResults.cs" />
+        <Compile Include="Interfaces\ISearchResultsExcludingMapper.cs" />
+        <Compile Include="Interfaces\ISearchResultsMapper.cs" />
+        <Compile Include="Interfaces\ISearchResultsValidator.cs" />
+        <Compile Include="Interfaces\IToolboxItemFilter.cs" />
+        <Compile Include="Interfaces\IValidator.cs" />
+        <Compile Include="Mappers\DefaultInitializingQueryParametersMapper.cs" />
+        <Compile Include="Mappers\DynamicContentToDynamicContentModelBaseMapper.cs" />
+        <Compile Include="Models\Base\DynamicContentModelBase.cs" />
+        <Compile Include="Models\Base\DynamicContentQueryParametersBase.cs" />
+        <Compile Include="Models\Base\QueryParametersBase.cs" />
+        <Compile Include="Models\DesignModeWidgetViewModel.cs" />
+        <Compile Include="Models\DynamicContentQueryResultsModel.cs" />
+        <Compile Include="Models\DynamicModuleDefinition.cs" />
+        <Compile Include="Models\GenericUnconfiguredWidgetViewModel.cs" />
+        <Compile Include="Models\Operator.cs" />
+        <Compile Include="Models\OrderBy.cs" />
+        <Compile Include="Models\QuerySortParameter.cs" />
+        <Compile Include="Models\SearchIndexQueryResultModel.cs" />
+        <Compile Include="Mvc\SearchIndexController.cs" />
+        <Compile Include="Ninject\FullBindingToSyntax.cs" />
+        <Compile Include="Ninject\FullBindingWhenInNamedWithOrOnSyntax.cs" />
+        <Compile Include="Ninject\LazyBindingWithOrOnSyntax.cs" />
+        <Compile Include="Ninject\LazyNinjectModule.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="RouteHandlers\AugmentedPageEditorRouteHandler.cs" />
+        <Compile Include="RouteHandlers\AugmentedTemplateEditorRouteHandler.cs" />
+        <Compile Include="RouteHandlers\RouteHandlerDependencies.cs" />
+        <Compile Include="Search\FilterModel.cs" />
+        <Compile Include="Search\SearchIndexFilterOperatorStrategy.cs" />
+        <Compile Include="Search\StringToQuerySortParameterListMapper.cs" />
+        <Compile Include="Startup\CatchAllRouteParameterBindings.cs" />
+        <Compile Include="Startup\SearchEngineStart.cs" />
+        <Compile Include="Startup\ToolboxFilters.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="app.config" />
+        <None Include="package.nuspec" />
+        <None Include="license.md" />
+        <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="icon.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Configuration\Startup\SearchIndexes\" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Target Name="NuGetBuild" AfterTargets="Build">
+        <Exec Command="nuget pack -outputdirector c:\code\lightpath\packages" ConsoleToMSBuild="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+        </Exec>
+        <Message Text="@(OutputOfExec)"/>
+    </Target>
 </Project>

@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Controllers;
 
-namespace MyFloridaCfoWeb.Application
+namespace SitefinityAccelerator.Startup
 {
     public class CatchAllRouteParameterBinding : HttpParameterBinding
     {

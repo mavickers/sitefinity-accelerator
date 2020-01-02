@@ -1,6 +1,6 @@
 ﻿using Ninject.Syntax;
 
-namespace MyFloridaCfoWeb.Application.RouteHandlers
+namespace SitefinityAccelerator.RouteHandlers
 {
     public class RouteHandlerDependencies
     {
