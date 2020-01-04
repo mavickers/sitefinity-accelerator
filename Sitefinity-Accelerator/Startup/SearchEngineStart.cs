@@ -51,33 +51,6 @@ namespace SitefinityAccelerator.Startup
             }
         }
 
-        public static void Warmup(ConfigElementList<SearchIndexStartupElement> indexes)
-        {
-            if (!TryInitialize(indexes, out var parameters)) return;
-
-            foreach (var index in parameters.Indexes)
-            {
-                var publishingPoint = parameters.PublishingManager.GetPublishingPoints().FirstOrDefault(p => p.Name == index.PublishingPointName);
-
-                // can't find the index, so abort for this entry
-
-                if (publishingPoint == null) continue;
-
-                // if the index is already present and not configured for forced rebuild, skip it
-
-                if (!index.WithForceRebuild && parameters.SearchService.IndexExists(index.IndexName)) continue;
-
-                if (index.WithBackgroundIndexing)
-                {
-                    SystemManager.BackgroundTasksService.EnqueueTask(new WarmupBackgroundTask(publishingPoint, parameters));
-                }
-                else
-                {
-                    SystemManager.RunWithElevatedPrivilege(parameters.WorkerDelegate, new object[] { publishingPoint, parameters.PublishingAdminService });
-                }
-            }
-        }
-
         private static void DoWarmup(object[] args)
         {
             var publishingPoint = args?[0] as PublishingPoint ?? throw new ArgumentException("args[0] (PublishingPoint)");
@@ -112,6 +85,33 @@ namespace SitefinityAccelerator.Startup
             };
 
             return true;
+        }
+
+        public static void Warmup(ConfigElementList<SearchIndexStartupElement> indexes)
+        {
+            if (!TryInitialize(indexes, out var warmupParameters)) return;
+
+            foreach (var index in warmupParameters.Indexes)
+            {
+                var publishingPoint = warmupParameters.PublishingManager.GetPublishingPoints().FirstOrDefault(p => p.Name == index.PublishingPointName);
+
+                // can't find the index, so abort for this entry
+
+                if (publishingPoint == null) continue;
+
+                // if the index is already present and not configured for forced rebuild, skip it
+
+                if (!index.WithForceRebuild && warmupParameters.SearchService.IndexExists(index.IndexName)) continue;
+
+                if (index.WithBackgroundIndexing)
+                {
+                    SystemManager.BackgroundTasksService.EnqueueTask(new WarmupBackgroundTask(publishingPoint, warmupParameters));
+                }
+                else
+                {
+                    SystemManager.RunWithElevatedPrivilege(warmupParameters.WorkerDelegate, new object[] { publishingPoint, warmupParameters.PublishingAdminService });
+                }
+            }
         }
     }
 }
