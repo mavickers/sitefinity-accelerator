@@ -31,5 +31,13 @@ namespace SitefinityAccelerator.Configuration.Startup
             get => (bool) this["WithBackgroundIndexing"];
             set => this["WithBackgroundIndexing"] = value;
         }
+
+        [ObjectInfo(Title = "Force Rebuild", Description = "Force rebuilding of the index, even if it is already present in the file system.")]
+        [ConfigurationProperty("WithForceRebuild", DefaultValue = false)]
+        public bool WithForceRebuild
+        {
+            get => (bool) this["WithForceRebuild"];
+            set => this["WithForceRebuild"] = value;
+        }
     }
 }

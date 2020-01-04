@@ -13,7 +13,7 @@
         <releaseNotes>Bug fixes.</releaseNotes>
         <description>Interfaces and classes for scaffolding Sitefinity projects.</description>
         <summary>Interfaces and classes for scaffolding Sitefinity projects.</summary>
-        <copyright>Copyright © 2019 LightPath Solutions, LLC</copyright>
+        <copyright>Copyright © 2020 LightPath Solutions, LLC</copyright>
         <repository type="git" url="https://github.com/mavickers/sitefinity-accelerator.git" branch="master" />
         <language>en-US</language>
         <tags>sitefinity web utility cms</tags>
