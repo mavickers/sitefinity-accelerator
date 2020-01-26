@@ -8,6 +8,8 @@ namespace SitefinityAccelerator.Extensions
 {
     public static class HtmlHelperExtensions
     {
+        public static MvcHtmlString Empty => new MvcHtmlString(string.Empty);
+
         public static MvcHtmlString ConditionalTagAttribute(this HtmlHelper htmlHelper, string attribute, string value)
         {
             if (string.IsNullOrWhiteSpace(attribute) || string.IsNullOrWhiteSpace(value))
@@ -37,6 +39,19 @@ namespace SitefinityAccelerator.Extensions
         public static IDisposable ConditionalTagWrapper(this HtmlHelper htmlHelper, string tagName, bool condition = true, object htmlAttributes = null)
         {
             return condition ? new DisposableTagBuilder(tagName, htmlHelper.ViewContext, htmlAttributes) : null;
+        }
+
+        public static bool HtmlStringIsNullOrEmpty(this HtmlString source)
+        {
+            if (source == null) return true;
+
+            var document = new HtmlDocument();
+
+            document.LoadHtml(source.ToString());
+
+            var text = HtmlEntity.DeEntitize(document.DocumentNode.InnerText);
+
+            return string.IsNullOrWhiteSpace(text);
         }
 
         public static string ToPlainString(this IHtmlString htmlString)
