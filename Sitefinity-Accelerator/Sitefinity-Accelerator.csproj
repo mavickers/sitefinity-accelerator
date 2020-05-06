@@ -229,6 +229,7 @@
     <Compile Include="Startup\CatchAllRouteParameterBindings.cs" />
     <Compile Include="Startup\SearchEngineStart.cs" />
     <Compile Include="Startup\ToolboxFilters.cs" />
+    <Compile Include="Startup\VirtualPathProviderViewEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
