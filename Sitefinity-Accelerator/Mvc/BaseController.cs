@@ -5,12 +5,15 @@ using SitefinityAccelerator.Exceptions;
 using SitefinityAccelerator.Extensions;
 using SitefinityAccelerator.Models;
 using Telerik.Sitefinity.Abstractions;
+using Telerik.Sitefinity.Services;
 
 namespace SitefinityAccelerator.Mvc
 {
     public class BaseController : Controller
     {
         private readonly BaseControllerParameters _baseControllerParameters;
+
+        protected static bool IsDesignMode => (SystemManager.IsDesignMode || SystemManager.IsInlineEditingMode) && !SystemManager.IsPreviewMode;
 
         public string DefaultUnconfiguredWidgetView => _baseControllerParameters.DefaultUnconfiguredWidgetView;
 
