@@ -45,7 +45,7 @@ namespace SitefinityAccelerator.Filters
                 return true;
             }
 
-            var roleNames = widgetConfig.SecurityRoles?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries) ?? new string[] { };
+            var roleNames = widgetConfig.SecurityRoles?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(role => role.Trim()) ?? new string[] { };
 
             // no roles, no access
             if (!roleNames.Any())
@@ -71,7 +71,7 @@ namespace SitefinityAccelerator.Filters
                 }
             }
 
-            return true;
+            return false;
         }
     }
 }
